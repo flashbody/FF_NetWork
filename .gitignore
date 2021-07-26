@@ -34,4 +34,17 @@ Carthage/Build
 # Note: if you ignore the Pods directory, make sure to uncomment
 # `pod install` in .travis.yml
 #
-# Pods/
+# 忽略指定文件
+*/UserInterfaceState.xcuserstate
+.DS_Store
+*.xcuserstate  
+project.xcworkspace  
+xcuserdata  
+UserInterfaceState.xcuserstate  
+project.xcworkspace/  
+xcuserdata/  
+UserInterface.xcuserstate
+Example/FF_NetWork.xcworkspace/xcuserdata/
+Pods/
+Podfile.lock
+Example/FF_NetWork.xcworkspace

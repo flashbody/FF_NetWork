@@ -25,18 +25,20 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'flashbody@foxmail.com' => '742043728@qq.com' }
-  s.source           = { :git => 'https://github.com/flashbody@foxmail.com/FF_NetWork.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/flashbody/FF_NetWork.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'FF_NetWork/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'FF_NetWork' => ['FF_NetWork/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.ios.deployment_target = '10.0'
+  s.static_framework = true
+  s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
+  s.xcconfig = {
+     'VALID_ARCHS' =>  'arm64 arm64e armv7 armv7s x86_64',
+   }
+  s.public_header_files = 'Pod/Classes/**/*.h'
+   s.dependency 'YTKNetwork'
+   s.dependency 'YYKit'
+   s.dependency 'AFNetworking'
 end
