@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'FF_NetWork_Example' do
+  pod 'FF_NetWork', :path => '../'
+
+  target 'FF_NetWork_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
